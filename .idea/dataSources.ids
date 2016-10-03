@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - messenger@localhost" uuid="26f63852-47c2-4424-9d67-bb163f2004e5">
+    <database-info product="MySQL" version="5.7.13-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="messenger"/>
+      <table id="2" parent="1" name="message"/>
+      <table id="3" parent="1" name="status"/>
+      <table id="4" parent="1" name="user"/>
+      <column id="5" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="6" parent="2" name="date">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="7" parent="2" name="message">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="8" parent="2" name="recipient_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="9" parent="2" name="sender_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="10" parent="2" name="status_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="11" parent="2" name="FK_cflo4pgxuiiyb554x0a9tylpn">
+        <columns>status_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="12" parent="2" name="FK_q55vuhpo0cr2pdrb0rejw3bmi">
+        <columns>recipient_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="13" parent="2" name="FK_tbto6hemu447oixxk730el2vx">
+        <columns>sender_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="14" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="15" parent="2" name="FK_cflo4pgxuiiyb554x0a9tylpn">
+        <columns>status_id</columns>
+        <ref-key>~.status.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="16" parent="2" name="FK_q55vuhpo0cr2pdrb0rejw3bmi">
+        <columns>recipient_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="17" parent="2" name="FK_tbto6hemu447oixxk730el2vx">
+        <columns>sender_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="18" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="19" parent="3" name="status">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="20" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="21" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="22" parent="4" name="confirmPassword">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="23" parent="4" name="email">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="24" parent="4" name="password">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="25" parent="4" name="username">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="26" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - messenger2@localhost" uuid="6c8563da-788b-4532-8c70-24e7284f174a">
+    <database-info product="MySQL" version="5.7.13-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="messenger2"/>
+      <table id="2" parent="1" name="message"/>
+      <table id="3" parent="1" name="user"/>
+      <table id="4" parent="1" name="status"/>
+      <column id="5" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="6" parent="2" name="date">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="7" parent="2" name="isNew">
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="8" parent="2" name="message">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="9" parent="2" name="theme">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="10" parent="2" name="recipient_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="11" parent="2" name="sender_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="12" parent="2" name="status_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="13" parent="2" name="status">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="14" parent="2" name="FK_cflo4pgxuiiyb554x0a9tylpn">
+        <columns>status_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="15" parent="2" name="FK_q55vuhpo0cr2pdrb0rejw3bmi">
+        <columns>recipient_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="16" parent="2" name="FK_tbto6hemu447oixxk730el2vx">
+        <columns>sender_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="17" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="18" parent="2" name="FK_cflo4pgxuiiyb554x0a9tylpn">
+        <columns>status_id</columns>
+        <ref-key>~.status.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="19" parent="2" name="FK_q55vuhpo0cr2pdrb0rejw3bmi">
+        <columns>recipient_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="20" parent="2" name="FK_tbto6hemu447oixxk730el2vx">
+        <columns>sender_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="21" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="22" parent="3" name="email">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="23" parent="3" name="password">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="24" parent="3" name="username">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="25" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="26" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="27" parent="4" name="satus">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="28" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - messenger3@localhost" uuid="c8e9f419-ecc0-455e-82d6-37919f91cf42">
+    <database-info product="MySQL" version="5.7.13-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="messenger3"/>
+      <table id="2" parent="1" name="message"/>
+      <table id="3" parent="1" name="user"/>
+      <column id="4" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="5" parent="2" name="date">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="6" parent="2" name="message">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="7" parent="2" name="status">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="8" parent="2" name="theme">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="9" parent="2" name="recipient_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="10" parent="2" name="sender_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="11" parent="2" name="FK_q55vuhpo0cr2pdrb0rejw3bmi">
+        <columns>recipient_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="12" parent="2" name="FK_tbto6hemu447oixxk730el2vx">
+        <columns>sender_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="13" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="14" parent="2" name="FK_q55vuhpo0cr2pdrb0rejw3bmi">
+        <columns>recipient_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="15" parent="2" name="FK_tbto6hemu447oixxk730el2vx">
+        <columns>sender_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="16" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="17" parent="3" name="email">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="18" parent="3" name="password">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="19" parent="3" name="username">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="20" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

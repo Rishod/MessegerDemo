@@ -1,0 +1,574 @@
+
+.container {
+	width: 100%;
+	height: 100vh;
+/*	background-color: #eee;*/
+	background-image: url(../imgs/hd-background.jpg);
+	background-size: cover;
+}
+
+.logo {
+	width: 120px;
+	height: 100px;
+	float: left;
+	margin-left: 25%;
+}
+
+
+.logo-img {
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	height: 100px;
+	min-width: 1000px;
+	background-color: rgba(0,0,0,.7);
+}
+
+.tagline {
+	height: 100px;
+	line-height: 100px;
+	font-size: 36px;
+	color: #fff;
+	float: left;
+	margin-left: 5%;
+	font-family: sans-serif;
+}
+
+.log-reg-switcher {
+	width: 40%;
+	margin-left: 35%;
+	margin-top: 340px;
+	float: left;
+}
+
+.button {
+	float: left;
+	border: black solid 2px;
+	width: 40%;
+	height: 60px;
+	margin-left: 5%;
+	line-height: 60px;
+	color: #fff;
+	font-size: 36px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.button--login {
+	background-color: #4aa224;
+}
+
+.button--registry {
+	transition: all .7s ease-out;
+	background-color: rgba(0,0,0,.3);
+}
+
+.button--registry:hover {
+	background-color: #c62400;
+}
+
+
+.form-holder {
+	width: 40%;
+	position: relative;
+	left: 34%;
+	height: 300px;
+	top: 10px;
+}
+
+.registry-form-holder {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-color: rgba(0,0,0,.85);
+	display: none;
+}
+
+.login-form-holder {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-color: rgba(0,0,0,.85);
+	display: none;
+}
+
+.login-form-holder > form {
+	width: 100%;
+}
+
+#log-form > input{
+	width: 60%;
+	height: 80px;
+	margin-left: 20%;
+	margin-top: 13px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 26px;
+}
+
+#log-form > input:focus{
+	box-shadow: 0 0 15px rgba(255,255,255,1);
+}
+
+#reg-form > input{
+	width: 60%;
+	height: 60px;
+	margin-left: 20%;
+	margin-top: 13px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 26px;
+}
+
+#reg-form > input:focus {
+   box-shadow: 0 0 15px rgba(255,255,255,1);
+}
+
+
+.mail-header {
+	width: 100%;
+	height: 100px;
+	background-color: rgba(0,0,0,.7);
+}
+
+.mail-container {
+	width: 76%;
+	background-color: rgba(0, 0, 0, .85);
+	float: left;
+	overflow: hidden;
+}
+
+.messages-panel {
+	width: 100%;
+	background-color: #382d2d;
+	float: left;
+	height: 84vh;
+	overflow-y: scroll;
+}
+
+.message-text-holder {
+	width: 100%;
+	background-color: #5d4f4f;
+	float: left;
+	height: 84vh;
+
+}
+
+.message-panel_message__photo {
+	float: left;
+	width: 30%;
+}
+
+
+
+.message-panel_message__info {
+	width: 70%;
+	float: left;
+	height: 100%;
+}
+
+.messages-panel_message {
+	width: 100%;
+	height: 60px;
+	overflow: hidden;
+	border-bottom: 1px white solid;
+	cursor: pointer;
+}
+
+
+.message-panel_message__photo > img {
+	width: 20%;
+	height: 80%;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 2.5%;
+}
+
+.message-panel_message__info___author {
+	width: 30%;
+	height: 100%;
+	color: white;
+	font-size: 16px;
+	line-height: 60px;
+	float: left;
+}
+
+.message-panel_message__info___text {
+	width: 30%;
+	height: 100%;
+	color: white;
+	font-size: 16px;
+	line-height: 60px;
+	float: left;
+	text-align: left;
+}
+
+.message-text_theme {
+	float: left;
+	width: 39%;
+	color: white;
+	text-align: center;
+	border-right: solid 1px white;
+}
+
+.message-text_theme-title {
+	width: 60%;
+	color: white;
+	float: left;
+	text-align: center;
+}
+
+.message-text-holder_text {
+	width: 100%;
+	background: black;
+	border-top: 1px solid white;
+	color: white;
+	float: left;
+	padding: 10px;
+}
+
+.mail-header_logo > img {
+	width: 100%;
+	height: 80%;
+	margin-top: 5%;
+}
+
+.mail-header_logo {
+	width: 10%;
+	float: left;
+	margin-left: 9%;
+}
+
+.mail-header_company-name {
+	width: 30%;
+	padding-left: 5%;
+	line-height: 100px;
+	color: white;
+	font-size: 32px;
+	float: left;
+}
+
+.mail-header_profile {
+	float: left;
+	margin-left: 13%;
+	width: 12%;
+	cursor: pointer;
+}
+
+.mail-header_profile > img {
+	width: 50%;
+	height: 80%;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 5%;
+}
+
+.messages-panel_message:hover {
+	background-color: #554848;
+}
+
+.messages-panel_message:active {
+	background-color: #262020;
+}
+
+.user-ico {
+	float: left;
+	margin-left: 2%;
+	width: 12%;
+}
+
+.user-ico > img {
+	width: 50%;
+	height: 80%;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 5%;
+}
+
+.messages-switcher {
+    float: left;
+	width: 23%;
+	background-color: transparent;
+	height: 84vh;
+	background-color: rgba(0,0,0,.8);
+	margin-left: 1%;
+}
+
+.messages {
+	height: 61px;
+	background-color: rgba(0,0,0,.2);
+	width: 100%;
+	text-align: center;
+	line-height: 61px;
+	font-size: 24px;
+	color: beige;
+	cursor: pointer;
+}
+
+.messages-getted {
+	background-color: rgba(0,130,0,.05);
+}
+
+.messages-sended {
+	background-color: rgba(0,0,130,.05);
+}
+
+.messages-try {
+	background-color: rgba(130,0,0,.05);
+}
+
+.messages-getted:hover {
+	background-color: rgba(0,130,0,.2);
+}
+
+.messages-getted:after {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	display: block;
+	content: "";
+	left: 80%;
+	top: -40px;
+	background-image: url(../imgs/w256h2561380453888Emails256x25632.png);
+	background-size: contain;
+	background-color: white;
+}
+
+.messages-sended:hover {
+	background-color: rgba(0,0,130,.2);
+}
+
+.messages-try:hover {
+	background-color: rgba(130,0,0,.2);
+}
+
+.messages-send{
+	background-color: #766f6f;
+}
+
+#modal_form {
+	width: 300px; 
+	height: 300px; 
+	border-radius: 5px;
+	border: 3px #000 solid;
+	background: rgba(0, 0, 0, .9);
+	position: fixed; 
+	top: 45%; 
+	left: 50%; 
+	margin-top: -150px;
+	margin-left: -150px; 
+	display: none; 
+	opacity: 0; 
+	z-index: 5; 
+	padding: 20px 10px;
+	border: 2px solid white;
+}
+
+#modal_form #modal_close {
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 10px;
+	right: 0px;
+	cursor: pointer;
+	display: block;
+}
+
+#overlay {
+	z-index:3; 
+	position:fixed; 
+	background-color:#000; 
+	opacity:0.8; 
+	-moz-opacity:0.8; 
+	filter:alpha(opacity=80);
+	width:100%; 
+	height:100%; 
+	top:0; 
+	left:0;
+	cursor:pointer;
+	display:none; 
+}
+
+#send-mail-form > input{
+	width: 86%;
+	margin-left: 7%;
+}
+
+#send-mail-form > textarea {
+	display: block;
+	margin: 0 auto;
+	resize: none;
+}
+.btn-exit {
+	float: left;
+	margin-left: 3.5%;
+	width: 5%;
+	cursor: pointer;
+	text-align: center;
+	font-size: 24px;
+	color: white;
+	background-color: transparent;
+	line-height: 30px;
+	height: 40px;
+}
+
+.profile-holder {
+	position: absolute;
+	width: 864px;
+	margin-left: 30%;
+	margin-top: 100px;
+	height: 400px;
+	background-color: rgba(0, 0, 0, .7);
+	overflow: hidden;
+}
+
+.profile-name {
+	width: 100%;
+	height: 50px;
+	background-color: rgba(0, 0, 0, .8);
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	font-size: 24px;
+}
+
+.user-photo {
+	width: 50%;
+	float: left;
+}
+
+.user-info {
+	width: 50%;
+	float: left;
+}
+
+.user-photo > img{
+	width: 55%;
+	height: 60%;
+	padding-left: 13%;
+	padding-top: 25px;
+}
+
+.user-field-label {
+	color: white;
+	margin-left: 14%;
+	line-height: 50px;
+	font-size: 24px;
+	margin-top: 70px;
+	background-color: rgba(0, 0, 0, .8);
+}
+
+.message-unreaded:after {
+	position: relative;
+	width: 43px;
+	height: 24px;
+	display: block;
+	content: "";
+	left: 19%;
+	top: 19px;
+	background-image: url(../imgs/envelope-rectangular-outline-variant_318-46239.png.jpg);
+	background-size: contain;
+	background-color: white;
+}
+
+.message-readed:after {
+	position: relative;
+	width: 43px;
+	height: 28px;
+	display: block;
+	content: "";
+	left: 19%;
+	top: 19px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../imgs/Letter-Open.png);
+	background-size: contain;
+	background-color: #5d4f4f;
+}
+
+.unreaded-counter {
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	background-color: white;
+	margin-left: 19.40%;
+	top: 134px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 10px;
+	line-height: 13px;
+	color: black;
+	z-index: 2;
+	font-weight: bolder;
+}
+
+#exit-btn {
+	display: block;
+	width: 100%;
+	line-height: 60px;
+	background-color: azure;
+	border-radius: 50%;
+	text-align: center;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.return-btn {
+	position: absolute;
+	display: block;
+	width: 8%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	left: 92%;
+	background-color: rgba(0,155,0,.6);
+	border-radius: 25%;
+	text-decoration: none;
+}
+
+.return-btn:hover {
+	background-color: rgba(0,155,0,.9);
+	cursor: pointer;
+}
+
+.m_name {
+	color: white;
+	width: 100%;
+	height: 20px;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.load-img {
+	position: relative;
+	width: 20%;
+	overflow: hidden;
+	top: 20px;
+	left: 32%;
+}
+
+
+
+/*
+.profile-cover {
+	background-color: rgba(0, 0, 0, .3);
+	width: 864px;
+	position: absolute;
+	height: 400px;
+}
+*/
+
+.message-panel_message__info___date {
+	width: 40%;
+	height: 100%;
+	color: white;
+	font-size: 16px;
+	line-height: 60px;
+	float: left;
+	text-align: left;
+}

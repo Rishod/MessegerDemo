@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - messenger@localhost" uuid="26f63852-47c2-4424-9d67-bb163f2004e5">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>messenger.*</schema-pattern>
+      <default-schemas>messenger.*</default-schemas>
+    </data-source>
+    <data-source name="MySQL - messenger2@localhost" uuid="6c8563da-788b-4532-8c70-24e7284f174a">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>messenger2.*</schema-pattern>
+      <default-schemas>messenger2.*</default-schemas>
+    </data-source>
+    <data-source name="MySQL - messenger3@localhost" uuid="c8e9f419-ecc0-455e-82d6-37919f91cf42">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>messenger3.*</schema-pattern>
+      <default-schemas>messenger3.*</default-schemas>
+    </data-source>
+  </component>
+</project>
