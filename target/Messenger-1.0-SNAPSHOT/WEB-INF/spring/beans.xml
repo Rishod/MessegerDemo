@@ -37,10 +37,6 @@
         </property>
     </bean>
 
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="maxUploadSize" value="2000000"/>
-    </bean>
-
     <!--security-->
 
     <security:http>
@@ -54,19 +50,11 @@
     <bean class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" id="encoder"/>
 
     <security:authentication-manager>
-
-        <security:authentication-provider>
-            <security:user-service>
-                <security:user name="user1" password="user1" authorities="ROLE_USER"/>
-            </security:user-service>
-        </security:authentication-provider>
-
         <security:authentication-provider user-service-ref="userServiceImpl">
             <security:password-encoder ref="encoder"/>
         </security:authentication-provider>
 
     </security:authentication-manager>
-
 
 
     <mvc:resources mapping="/resources/**" location="/resources/"/>
